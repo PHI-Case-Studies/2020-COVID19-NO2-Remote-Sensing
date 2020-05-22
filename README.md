@@ -1,3 +1,3 @@
-# 2020-COVID-19-NO2-Remote-Sensing
+# 2020-COVID19-NO2-Remote-Sensing
 
 This is the README file.
