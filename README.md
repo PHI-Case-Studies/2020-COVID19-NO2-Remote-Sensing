@@ -1,4 +1,4 @@
-# Case Study: 2020 COVID19: Processing Nitrogen Dioxide Remote Sensing Data (Basic)
+# Case Study: 2020 COVID19: Processing Nitrogen Dioxide Remote Sensing Data
 
 This repository was created for use by CDC programs to collaborate on public health surveillance related projects in support of the CDC Surveillance Strategy. Github is not hosted by the CDC, but is used by CDC and its partners to share information and collaborate on software.
 
