@@ -16,6 +16,9 @@ Figure 1. Sequence of airborne NO2 concentrations measured with the TROPOMI sens
 ### Special Note
 This advanced but introductory set of notebooks assumes a computing environment with at least 16GB of RAM, adequate internet bandwidth and 100GB of unused disk space. The NetDC4 files from the Sentinel 5P satellite are large-sized, each one about 400MB. For demonstration purposes, 4 NetCD4 files are downloaded, then converted to Pandas DataFrames, which are also saved on file.
 
+### Acknowledgements
+Special thanks to the great folks behind the NASA Applied Remote Sensing Training (ARSET) for the easy-to-follow webinars on [NO2 remote sensing](https://arset.gsfc.nasa.gov/airquality/webinars/advanced-NO2-2019).
+
 ## Public Domain
 This repository constitutes a work of the United States Government and is not
 subject to domestic copyright protection under 17 USC § 105. This repository is in
