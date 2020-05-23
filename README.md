@@ -6,6 +6,13 @@ This repository was created for use by CDC programs to collaborate on public hea
 
 This is a **digital case study** built with [Jupyter Notebook](https://jupyter.org/) and Docker to support COVID 19 studies on reduction of pollution from national lockdowns. 
 
+1. ScienceDaily News: [COVID-19 lockdowns significantly impacting global air quality](https://www.sciencedaily.com/releases/2020/05/200511124444.htm)
+2. [Wu, X., Nethery, R.C., Sabath, B.M., Braun, D. and Dominici, F., 2020. Exposure to air pollution and COVID-19 mortality in the United States. medRxiv.](https://www.medrxiv.org/content/medrxiv/early/2020/04/27/2020.04.05.20054502.full.pdf)
+3. [Dutheil, F., Baker, J. S., & Navel, V. (2020). COVID-19 as a factor influencing air pollution?. Environmental Pollution (Barking, Essex: 1987).](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144597/)
+
+Figure 1. Sequence of airborne NO2 concentrations measured with the TROPOMI sensor on-board ESA’s Sentinel-5 satellite before and after the COVID-19 pandemic (image source: #3 above). 
+<img src='images/EditorLetter.png'>
+
 ### Special Note
 This advanced but introductory set of notebooks assumes a computing environment with at least 16GB of RAM, adequate internet bandwidth and 100GB of unused disk space. The NetDC4 files from the Sentinel 5P satellite are large-sized, each one about 400MB. For demonstration purposes, 4 NetCD4 files are downloaded, then converted to Pandas DataFrames, which are also saved on file.
 
