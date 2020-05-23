@@ -342,10 +342,11 @@ def batch_assemble_filtered_pickles(filtered_dir):
  
     return full_df
 
-def plot_maps(iso3, filter_gdf, filelist, colormap):
+def plot_maps(iso3, filter_gdf, filelist, colormap, sensing_date):
     crs = filter_gdf.crs
     gdf_sjoin_list = []
     country_gdf = filter_gdf[filter_gdf['iso3']==iso3]
+    country_name = list(country_gdf.loc[country_gdf['iso3']==iso3,'name'].unique())[0]
     for file in filelist:
         gdf_sjoin = pd.read_pickle('./'+file).set_geometry('geometry')
         gdf_sjoin.crs = crs
@@ -389,7 +390,7 @@ def plot_maps(iso3, filter_gdf, filelist, colormap):
     sm = plt.cm.ScalarMappable(cmap=colormap, norm=plt.Normalize(vmin=vmin_qa, vmax=vmax_qa))
     sm._A = []
     fig.colorbar(sm, cax=cax)
-    plt.suptitle('Tropospheric NO2, QA Value')
+    plt.suptitle('Tropospheric NO2, QA Value ('+country_name+', '+sensing_date+')')
 
     fig, ax= plt.subplots(sharex=True, sharey=True, figsize=(8,6), constrained_layout=True)
     for gdf in gdf_sjoin_list:
@@ -405,4 +406,4 @@ def plot_maps(iso3, filter_gdf, filelist, colormap):
     sm = plt.cm.ScalarMappable(cmap=colormap, norm=plt.Normalize(vmin=vmin_no2, vmax=vmax_no2))
     sm._A = []
     fig.colorbar(sm, cax=cax)
-    plt.suptitle('Tropospheric NO2, Tropospheric Column, moles/m2 ('+iso3+')')
+    plt.suptitle('Tropospheric NO2, Tropospheric Column, moles/m2 ('+country_name+', '+sensing_date+')')
