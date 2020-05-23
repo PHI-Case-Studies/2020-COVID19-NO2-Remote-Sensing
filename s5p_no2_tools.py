@@ -195,6 +195,16 @@ def get_filename_from_cd(cd):
 def download_nc_file(url, auth, savedir, logging, refresh):
     """
     Purpose: Download NetCD4 files from URL
+    
+    Parameters:
+    url: string, download url obtained from Sentinel 5P Open Data Hub search results
+    auth: dictionary of 'user' and 'password'
+    savedir: string, path to save NetCD4 files
+    logging: boolean, turn logging on or off
+    refresh: boolean, overwrite previously downloaded files (helps save time if False)
+
+    Returns:
+    filename: string filename of NetCD4 file
     """
     user = auth['user']
     password = auth['password']
@@ -384,7 +394,6 @@ def plot_maps(iso3, filter_gdf, filelist, colormap, sensing_date):
 
     # add colorbar
     fig = ax.get_figure()
-    #cax = fig.add_axes([0.9, 0.2, 0.03, 0.6])
     divider = make_axes_locatable(ax)
     cax = divider.append_axes("right", size="3%", pad=0.1)
     sm = plt.cm.ScalarMappable(cmap=colormap, norm=plt.Normalize(vmin=vmin_qa, vmax=vmax_qa))
